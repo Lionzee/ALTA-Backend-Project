@@ -23,6 +23,11 @@ Route::namespace('API')->group(function (){
 
     Route::middleware('jwt.verify')->group(function (){
         Route::post('logout', 'UserController@logout');
+
+
+        //Carts
+        Route::post('cart/add','CartController@store');
+        Route::get('cart/view','CartController@cart_items');
     });
 
 

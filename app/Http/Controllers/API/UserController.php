@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Cart;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
@@ -45,6 +46,9 @@ class UserController extends Controller
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
+        ]);
+        Cart::create([
+            'user_id' => $user->id,
         ]);
 
         $token = JWTAuth::fromUser($user);
