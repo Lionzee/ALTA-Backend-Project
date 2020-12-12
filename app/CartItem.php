@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class CartItem extends Model
 {
     protected $fillable = ['cart_id','product_id','quantity','note','total_price'];
+    protected $hidden = ["created_at", "updated_at",'cart_id'];
 
     public static function isExist($product_id){
         $data = CartItem::where('product_id',$product_id)->where('cart_id',Cart::getCartId())->first();

@@ -6,14 +6,15 @@ use App\Cart;
 use App\CartItem;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
 
     public function cart_items(){
-        $data = CartItem::orderBy('created_at','DESC')
-            ->where('cart_id',Cart::getCartId())
-            ->paginate(10);
+        $data = Cart::with('users','cart_items')
+            ->where('user_id',Auth::user()->id)
+            ->get();
 
         if($data){
             return response()->json([

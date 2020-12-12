@@ -21,6 +21,9 @@ Route::namespace('API')->group(function (){
     Route::post('register', 'UserController@register');
     Route::post('login', 'UserController@login');
 
+
+    Route::get('product/index','ProductController@index');
+
     Route::middleware('jwt.verify')->group(function (){
         Route::post('logout', 'UserController@logout');
 
@@ -30,7 +33,7 @@ Route::namespace('API')->group(function (){
         Route::get('cart/view','CartController@cart_items');
 
         //Products
-        Route::post('product/add','ProductController@store');
+        Route::post('product/create','ProductController@store');
 
     });
 
