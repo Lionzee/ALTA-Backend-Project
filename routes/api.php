@@ -28,6 +28,10 @@ Route::namespace('API')->group(function (){
         //Carts
         Route::post('cart/add','CartController@store');
         Route::get('cart/view','CartController@cart_items');
+
+        //Products
+        Route::post('product/add','ProductController@store');
+
     });
 
 
