@@ -32,6 +32,7 @@ Route::namespace('API')->group(function (){
         Route::post('cart/add','CartController@store');
         Route::get('cart/view','CartController@cart_items');
         Route::delete('item/{item_id}','CartController@delete_item');
+        Route::post('item/{item_id}','CartController@update_item');
 
         //Products
         Route::post('product/create','ProductController@store');

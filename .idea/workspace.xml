@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/CartItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartItem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,7 @@
       <updated>1607330960037</updated>
       <workItem from="1607330962376" duration="765000" />
       <workItem from="1607340278094" duration="18055000" />
-      <workItem from="1607741085770" duration="6813000" />
+      <workItem from="1607741085770" duration="9272000" />
     </task>
     <servers />
   </component>
@@ -169,9 +170,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607763495476">
+    <state x="413" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607820038962">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="413" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607763495476" />
+    <state x="413" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607820038962" />
   </component>
 </project>

@@ -22,9 +22,13 @@ class CartItem extends Model
     public static function isMine($item_id){
         $user_id = Auth::user()->id;
         $item = CartItem::where('id',$item_id)->first();
-        $cart = Cart::where('id',$item->cart_id)->first();
-        if($cart->user_id == $user_id){
-            return true;
+        if($item){
+            $cart = Cart::where('id',$item->cart_id)->first();
+            if($cart->user_id == $user_id){
+                return true;
+            }else{
+                return false;
+            }
         }else{
             return false;
         }

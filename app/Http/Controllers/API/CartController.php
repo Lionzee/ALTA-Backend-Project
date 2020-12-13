@@ -7,6 +7,7 @@ use App\CartItem;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class CartController extends Controller
 {
@@ -51,6 +52,35 @@ class CartController extends Controller
                 "error_code" => "00",
                 "message" => "item add success : item added to cart",
                 "data" => $data,
+            ]);
+        }
+    }
+
+    public function update_item(Request $request,$item_id){
+        $check = CartItem::isMine($item_id);
+        $validator = Validator::make($request->all(), [
+            'qty' => 'required|numeric|gt:0'
+        ]);
+
+        if ($validator->fails()){
+            return response()->json($validator->errors(), 400);
+        }
+
+        if($check){
+            $data = CartItem::where('id',$item_id)->first();
+            $data->quantity = $request->qty;
+            $data->total_price = CartItem::getTotalPrice($data->product_id,$request->qty);
+            $data->save();
+
+            return response()->json([
+                "errorCode" => "00",
+                "message" => "update success : item updated",
+                "data" => $data,
+            ]);
+        }else{
+            return response()->json([
+                "errorCode" => "05",
+                "message" => "failed update : can't find any item"
             ]);
         }
     }
