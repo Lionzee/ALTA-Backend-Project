@@ -24,5 +24,15 @@ class Cart extends Model
         return $this->hasMany(CartItem::class,'cart_id','id');
     }
 
+    public function getTotalPriceAttribute(){
+        $user_id = Auth::user()->id;
+        $cart = Cart::where('user_id',$user_id)->first();
+        $item_sum = CartItem::where('cart_id',$cart->id)->sum('total_price');
+
+        return $item_sum;
+    }
+
+    public $appends = ['total_price'];
+
 
 }
