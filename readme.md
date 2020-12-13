@@ -7,6 +7,62 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+# About This Project
+Following are the list of things taken care of:
+- JWT pre-installed
+- Registration API
+- Login API
+
+#System Requirement
+- Customer can see list product based on categories 
+- Customer can add product to shopping cart
+- Customer can see added product in shopping cart
+- Customer can delete product that listed on cart
+- Customer can checkout and proccess to payment (not implemented)
+
+How to use?
+--
+
+Clone this repository:
+
+    git clone github.com:Lionzee/ALTA-Backend-Project.git
+
+Remove .git 
+
+    rm -rf .git
+
+Install dependencies:
+
+    composer install
+    
+Get JWT Secret key:
+
+    php artisan jwt:secret
+
+Copy ``.env.example`` file:
+
+    cp .env.example .env
+
+Configure ``.env`` file and setup your own database
+
+
+### REST API Design and Documentation - General
+- **[<code>POST</code> Registration](/time_zones/GET_list.md)**
+- **[<code>GET</code> Login](/available_phone_numbers/GET_list.md)**
+- **[<code>POST</code> Logout](/available_phone_numbers/GET_list.md)**
+
+### [Products]
+- **[<code>GET</code> Product List](/services/GET_list.md)**
+- **[<code>POST</code> Create Product](/services/GET_id.md)**
+
+### [Carts]
+- **[<code>GET</code> Product List](/services/GET_list.md)**
+- **[<code>POST</code> Create Product](/services/GET_id.md)**
+- **[<code>GET</code> Cart List](/services/GET_list.md)**
+- **[<code>POST</code> Cart Item Update](/services/GET_id.md)**
+- **[<code>DELETE</code> Cart Item Delete](/services/GET_id.md)**
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
