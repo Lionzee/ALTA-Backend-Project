@@ -47,20 +47,26 @@ Configure ``.env`` file and setup your own database
 
 
 ### REST API Design and Documentation - General
-- **[<code>POST</code> Registration](/time_zones/GET_list.md)**
-- **[<code>GET</code> Login](/available_phone_numbers/GET_list.md)**
-- **[<code>POST</code> Logout](/available_phone_numbers/GET_list.md)**
+- **[<code>POST</code> Registration]**
+- **[<code>GET</code> Login]**
+- **[<code>POST</code> Logout]**
 
 ### [Products]
-- **[<code>GET</code> Product List](/services/GET_list.md)**
-- **[<code>POST</code> Create Product](/services/GET_id.md)**
+- **[<code>GET</code> Product List]**
+- **[<code>POST</code> Create Product]**
 
 ### [Carts]
-- **[<code>GET</code> Product List](/services/GET_list.md)**
-- **[<code>POST</code> Create Product](/services/GET_id.md)**
-- **[<code>GET</code> Cart List](/services/GET_list.md)**
-- **[<code>POST</code> Cart Item Update](/services/GET_id.md)**
-- **[<code>DELETE</code> Cart Item Delete](/services/GET_id.md)**
+- **[<code>GET</code> Product List]**
+- **[<code>POST</code> Create Product]**
+- **[<code>GET</code> Cart List]**
+- **[<code>POST</code> Cart Item Update]**
+- **[<code>DELETE</code> Cart Item Delete]**
+
+### Postman Collection
+https://www.getpostman.com/collections/2d1bbac017f330fc99c3
+
+### ERD Design
+https://drive.google.com/file/d/1qtXgll4mJ7DxSqwET-_g-JvvvXlK4nlB/view?usp=sharing
 
 
 ## About Laravel
