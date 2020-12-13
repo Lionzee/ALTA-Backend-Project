@@ -54,4 +54,22 @@ class CartController extends Controller
             ]);
         }
     }
+
+    public function delete_item($item_id){
+        $check = CartItem::isMine($item_id);
+        if($check){
+            $item = CartItem::find($item_id);
+            $item->delete();
+
+            return response()->json([
+                "errorCode" => "00",
+                "message" => "item deleted"
+            ]);
+        }else{
+            return response()->json([
+                "errorCode" => "05",
+                "message" => "cant find item"
+            ]);
+        }
+    }
 }
